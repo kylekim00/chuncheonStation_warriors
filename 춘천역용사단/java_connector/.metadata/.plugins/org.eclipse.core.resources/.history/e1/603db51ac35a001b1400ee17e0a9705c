@@ -1,0 +1,21 @@
+import java.io.*;
+public class FsJson {
+	public FsJson() {
+		
+	}
+	
+	public static void main(String[] args) {
+		String[] pathnames;
+		File f = new File("/Users/gimhong-gwon/Desktop/free-project/춘천역용사단/data");
+		pathnames = f.list();
+		for(String p : pathnames) {
+			
+			String[] S= p.split("\\.",2);
+			if(S.length>=2) {
+				if(S[1].equals("json")) {
+					System.out.println("ok")
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+body{
+    background-color: bisque;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    margin: 0px;
+}
+
+.body{
+    
+}
+
+#body_head{
+    background-color: rgb(212, 53, 25);
+
+    
+}
+#body_head > div{
+    position: relative;
+    top: 20%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    font-size: 50px;
+    color: coral;
+    text-align: center;
+    box-shadow: 3px;
+}
+#body_head > img{
+    position: relative;
+    top: 20%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#anime{
+    width: 100%;
+    height: auto;
+}

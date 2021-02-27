@@ -1,0 +1,144 @@
+body{
+    background-color: bisque;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    margin: 0px;
+}
+
+.body{
+    
+}
+
+#body_head{
+    background-color: rgb(212, 53, 25);
+
+    
+}
+#body_head > div{
+    position: relative;
+    top: 20%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    font-size: 50px;
+    color: coral;
+    text-align: center;
+    box-shadow: 3px;
+}
+#body_head > img{
+    position: relative;
+    top: 20%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#body_form{
+    display: flex;
+    justify-content: center;
+}
+form{
+    width: 100%;   
+}
+
+#form_member_gender{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form_member_gender_block{
+    background-color: rgba(251, 103, 77, 0.541);
+    text-align: center;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    border: 0;
+    border-left: 2px; 
+    border-color: #ff0000;
+    
+    width: 100%;
+    padding-top: 0%;
+}
+
+.form_member_gender_block:hover{
+    background-color: rgba(255, 91, 62, 0.767);
+    transition: 0.5s;
+}
+
+.form_member_gender_block > img{
+    width:100%;
+}
+
+
+#form_member_count{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/*form 몇명버튼*/
+
+
+.form_member_count_block{
+    background-color: rgba(251, 103, 77, 0.541);
+    text-align: center;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    border: 0;
+    border-left: 2px; 
+    border-color: #ff0000;
+    
+    width: 100%;
+    padding-top: 33%;
+}
+.form_member_count_block:hover{
+    background-color: rgba(255, 91, 62, 0.767);
+    transition: 0.5s;
+}
+.form_member_count_block > img{
+    width:100%;
+}
+/*form 제출 버튼*/
+
+#form_go{
+
+}
+#form_go_block{
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    padding:10%;
+    border-radius: 10%;
+    border-style: none;
+    background-color: rgba(251, 103, 77, 0.541);
+    outline-style: none; /*아웃라인 설정*/
+    font-size: 70px;
+    color: white;
+    text-shadow: 2px 2px #ff0000;
+
+}
+
+#form_go_block:hover{
+    background-color: rgba(255, 91, 62, 0.767);
+    transition: 0.5s;
+}
+#form_go_block:active{
+    background-color: rgb(255, 0, 0);
+    transition: none;
+}
+.anime{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.anime1{
+    position: relative;
+	width: 100%;
+	height: auto;
+    display: block;
+}

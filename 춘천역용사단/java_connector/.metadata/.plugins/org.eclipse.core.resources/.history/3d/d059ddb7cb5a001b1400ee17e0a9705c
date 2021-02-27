@@ -1,0 +1,31 @@
+import java.io.*;
+import org.json.*;
+public class FsJson {
+	public FsJson() {
+		
+	}
+	
+	public static void main(String[] args) {
+		String[] pathnames;
+		File dirList = new File("/Users/gimhong-gwon/Desktop/free-project/춘천역용사단/data");
+		pathnames = dirList.list();
+		for(int i=0; i<pathnames.length; i++) {
+			String[] S= pathnames[i].split("\\.",2);
+			if(S.length>=2 && S[1].equals("json")) {
+				System.out.println(pathnames[i]);
+				try {
+					FileReader f = new FileReader("/Users/gimhong-gwon/Desktop/free-project/춘천역용사단/data/"+pathnames[i]);
+					char[] output = new char[100];
+					f.read(output);
+					System.out.println(output);
+					JSONObject j = new JSONObject(output);
+					System.out.println(j.get("client_info"));
+				} catch (IOException e) {
+					
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+}

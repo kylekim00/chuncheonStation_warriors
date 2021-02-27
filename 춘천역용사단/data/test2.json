@@ -1,0 +1,11 @@
+{
+  "client_info": {
+    "client_name": "hongkwon",
+    "client_gender": true,
+    "client_prefer_gender": true,
+    "client_prefer_count": -1
+  },
+  "Gender": true,
+  "prefer_gender": -1,
+  "count": -1
+}

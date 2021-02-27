@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../public/css/frame.css">
+        <link rel="stylesheet" href="../public/css/slide.css">
+        <title>춘천역 용사단</title>
+    </head>
+    <body>
+        <div class="body" id="body_head">
+            <img src="../public/icon/worriors of chuncheon.png" alt="">
+        </div>
+        <div class="body" id="body_form">
+            <form action="/" method="post" id="form_form">
+
+                <div id="form_member_count">
+                    <button class="form_member_count_block" id="count1" onclick="click1(event)">둘</button>
+                    <button class="form_member_count_block" id="count2" onclick="click2(event)">셋</button>
+                    <button class="form_member_count_block" id="count3" onclick="click3(event)">넷</button>
+                    <br><br>
+                    <button class="form_member_count_block" id="count1" onclick="click1(event)">둘</button>
+                    <button class="form_member_count_block" id="count2" onclick="click2(event)">셋</button>
+                    <button class="form_member_count_block" id="count3" onclick="click3(event)">넷</button>
+                    <input type="hidden" name="form_count" id="form_count" value=''>
+                </div>
+                <br>
+                <input type="button" value="결성이닷!" id="form_go" name="go">
+            </form>
+                <br>
+                <br>
+                
+        </div>
+        <img src="/icon/image.jpg" id="anime" alt="" style="width: 100%;">
+    </body>
+    <script>
+        //둘셋넷
+        let count = document.getElementById('form_count').value;
+        let click1 = (event)=>{
+            event.preventDefault();
+            document.getElementById('count1').style.backgroundColor = '#ff0000';
+            document.getElementById('count2').style.backgroundColor = 'rgba(251, 103, 77, 0.541)';
+            document.getElementById('count3').style.backgroundColor = 'rgba(251, 103, 77, 0.541)';
+            count = '1';
+        }
+        let click2 = (event)=>{
+            event.preventDefault();
+            document.getElementById('count1').style.backgroundColor = 'rgba(251, 103, 77, 0.541)';
+            document.getElementById('count2').style.backgroundColor = '#ff0000';
+            document.getElementById('count3').style.backgroundColor = 'rgba(251, 103, 77, 0.541)';
+            count = '2';
+        }
+        let click3 = (event)=>{
+            event.preventDefault();
+            document.getElementById('count1').style.backgroundColor = 'rgba(251, 103, 77, 0.541)';
+            document.getElementById('count2').style.backgroundColor = 'rgba(251, 103, 77, 0.541)';
+            document.getElementById('count3').style.backgroundColor = '#ff0000';
+            count = '3';
+        }
+        //결성이닷
+        document.getElementById('form_go').addEventListener('click', ()=>{
+            if(document.getElementById('form_count').value==''){
+                alert('인원수가 몇명?');
+            }
+            else{
+                document.getElementById('form_form').submit();
+            }
+        });
+    </script>
+</html>

@@ -1,0 +1,43 @@
+import java.io.*;
+import org.json.*;
+import org.json.simple.*;
+import org.json.simple.parser.JSONParser;
+
+public class FsJson {
+	public FsJson() {
+		
+	}
+	
+	public static void main(String[] args) {
+		String[] pathnames;
+		File dirList = new File("/Users/gimhong-gwon/Desktop/free-project/춘천역용사단/data");
+		pathnames = dirList.list();
+		for(int i=0; i<pathnames.length; i++) {
+			String[] S= pathnames[i].split("\\.",2);
+			if(S.length>=2 && S[1].equals("json")) {
+				try {
+					FileReader f = new FileReader("/Users/gimhong-gwon/Desktop/free-project/춘천역용사단/data/"+pathnames[i]);
+					String output = "";
+					i=0;
+					while(true) {
+						int data = f.read();
+						if(data==-1) {
+							System.out.println("dd");
+							break;
+						}
+						output +=(char)data;
+					}
+					f.close();
+					System.out.println(output);
+//					JSONParser d = new JSONParser();
+//					JSONObject j = (JSONObject) d.parse;
+//					System.out.println(jarr);
+				} catch (IOException e) {
+					
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+}
